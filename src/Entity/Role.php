@@ -22,7 +22,7 @@ class Role
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $idRole;
-  
+
     /**
      * @var string
      *
@@ -30,8 +30,8 @@ class Role
      * @MyValidation\VerifNull
      */
     private $nomRole;
-  
-    public function setIdRole(string $idRole): self
+
+    public function setIdRole(int $idRole): self
     {
         $this->idRole = $idRole;
 
@@ -54,13 +54,11 @@ class Role
 
         return $this;
     }
-   
 
-      
+
+
     public function __toString(): string
     {
         return $this->idRole;
     }
-
-
 }

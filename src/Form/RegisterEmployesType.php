@@ -17,26 +17,25 @@ class RegisterEmployesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nom',TextType::class)
-            ->add('prenom',TextType::class)
-            ->add('cin',TextType::class)
-            ->add('password',PasswordType::class)
-            ->add('email',TextType::class)
-            ->add('numTel',TextType::class)
-            ->add('dateNaissance',DateType::class, [
-                'widget' => 'choice',
+            ->add('nom', TextType::class)
+            ->add('prenom', TextType::class)
+            ->add('cin', TextType::class)
+            ->add('password', PasswordType::class)
+            ->add('email', TextType::class)
+            ->add('numTel', TextType::class)
+            ->add('dateNaissance', DateType::class, [
+                'widget' => 'single_text',
+
             ])
-            ->add('adresse',TextType::class)
-            ->add('posteEmploye',TextType::class)
+            ->add('adresse', TextType::class)
+            ->add('posteEmploye', TextType::class)
             ->add('idrest', EntityType::class, [
                 'class' => Restaurant::class,
                 'choice_label' => 'nom',
-                
+
                 'multiple' => false,
                 // 'expanded' => true,
-            ])
-           
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

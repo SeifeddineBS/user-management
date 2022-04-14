@@ -24,7 +24,7 @@ class Utilisateur implements UserInterface
      */
     private $id;
 
-  
+
 
     /**
      * @var string
@@ -331,7 +331,7 @@ class Utilisateur implements UserInterface
         return $this;
     }
 
-    
+
     public function getRoles(): array
     {
         $roles = $this->roles;
@@ -370,6 +370,4 @@ class Utilisateur implements UserInterface
 
         return $this;
     }
-
-
 }
